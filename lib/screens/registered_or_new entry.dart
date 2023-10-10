@@ -1,18 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kachra_app/screens/reg_residents.dart';
-
 import 'drawer/drawer_final.dart';
-import 'employee_login.dart';
 import 'new_entry.dart';
+
 
 class RegPage extends StatelessWidget {
   const RegPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: GestureDetector(
+    return GestureDetector(
         onTap: () {
           if (!FocusScope.of(context).hasPrimaryFocus) {
             FocusScope.of(context).unfocus();
@@ -124,7 +122,6 @@ class RegPage extends StatelessWidget {
             ),
           ),
         ),
-      ),
     );
   }
 }

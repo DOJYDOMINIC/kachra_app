@@ -8,8 +8,7 @@ class EmpLogin2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return Scaffold(
         body: Stack(
           children: [
             Container(
@@ -214,7 +213,6 @@ class EmpLogin2 extends StatelessWidget {
           ],
         ),
 
-      ),
-    );
+      );
   }
 }

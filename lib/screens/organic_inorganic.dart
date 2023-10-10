@@ -388,7 +388,7 @@ class _HandleoverState extends State<Handleover> {
                 SizedBox(
                   height: isTrueSelected
                       ? MediaQuery.of(context).size.height * .09
-                      : MediaQuery.of(context).size.height * .5,
+                      : MediaQuery.of(context).size.height * .43,
                 ),
                 GestureDetector(
                   onTap: () {
@@ -401,22 +401,22 @@ class _HandleoverState extends State<Handleover> {
                   child: Image(
                       width: 40, image: AssetImage('asset/image/arrow.png')),
                 ),
-                Container(
-                  height: 50,
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
-                    // child: Row(
-                    //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    //     children: [
-                    //       IconButton(
-                    //           onPressed: () {},
-                    //           icon: Icon(Icons.arrow_back_ios)),
-                    //       IconButton(
-                    //           onPressed: () {},
-                    //           icon: Icon(Icons.arrow_forward_ios))
-                    //     ]),
-                  ),
-                ),
+                // Container(
+                //   height: 50,
+                //   child: Padding(
+                //     padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                //     // child: Row(
+                //     //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //     //     children: [
+                //     //       IconButton(
+                //     //           onPressed: () {},
+                //     //           icon: Icon(Icons.arrow_back_ios)),
+                //     //       IconButton(
+                //     //           onPressed: () {},
+                //     //           icon: Icon(Icons.arrow_forward_ios))
+                //     //     ]),
+                //   ),
+                // ),
               ],
             ),
           ),

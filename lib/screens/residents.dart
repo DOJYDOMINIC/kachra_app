@@ -20,7 +20,7 @@ class Mystatus extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            SizedBox(height: 30,),
+            // SizedBox(height: 30,),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
