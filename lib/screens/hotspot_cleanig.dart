@@ -1,15 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:kachra_app/screens/start_page.dart';
-
+import 'package:url_launcher/url_launcher.dart';
+import 'dart:io';
 import 'drawer/drawer_final.dart';
 
-class Hotspotcleaning extends StatelessWidget {
+class Hotspotcleaning extends StatefulWidget {
+
   const Hotspotcleaning({super.key});
 
   @override
+  State<Hotspotcleaning> createState() => _HotspotcleaningState();
+}
+
+class _HotspotcleaningState extends State<Hotspotcleaning> {
+  TextEditingController _ward = TextEditingController();
+
+  @override
   Widget build(BuildContext context) {
-    TextEditingController _name = TextEditingController();
     return GestureDetector(
       onTap: () {
         if (!FocusScope.of(context).hasPrimaryFocus) {
@@ -189,18 +198,22 @@ class Hotspotcleaning extends StatelessWidget {
                                                 color: Colors.grey,
                                                 fontSize: 13),
                                           )),
-                                      TextField(
-                                        textAlignVertical:
-                                        TextAlignVertical.center,
-                                        // Center-align the hint text vertically
-                                        decoration: InputDecoration(
-                                          border: InputBorder.none,
-                                          // Remove the underline border
-                                          hintStyle:
-                                          TextStyle(color: Colors.black),
-                                          contentPadding: EdgeInsets.symmetric(
-                                              horizontal:
-                                              16.0), // Adjust horizontal padding as needed
+                                      SizedBox(
+                                        height: 25,
+                                        child: TextField(
+                                          controller: _ward,
+                                          textAlignVertical:
+                                          TextAlignVertical.center,
+                                          // Center-align the hint text vertically
+                                          decoration: InputDecoration(
+                                            border: InputBorder.none,
+                                            // Remove the underline border
+                                            hintStyle:
+                                            TextStyle(color: Colors.black),
+                                            contentPadding: EdgeInsets.symmetric(
+                                                horizontal:
+                                                16.0), // Adjust horizontal padding as needed
+                                          ),
                                         ),
                                       ),
                                     ],
@@ -211,7 +224,9 @@ class Hotspotcleaning extends StatelessWidget {
                                 padding:
                                 const EdgeInsets.fromLTRB(0, 16, 0, 16),
                                 child: GestureDetector(
-                                  onTap: () {},
+                                  onTap: () {
+                                  },
+
                                   child: Container(
                                     height: 52,
                                     width: 258,
@@ -226,14 +241,31 @@ class Hotspotcleaning extends StatelessWidget {
                                   ),
                                 ),
                               ),
-                              Container(
-                                  width: 258,
-                                  height: 120,
-                                  decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      borderRadius: BorderRadius.circular(13)),
-                                  padding: EdgeInsets.all(16.0),
-                                  child: Icon(Icons.camera_alt)
+                              GestureDetector(
+                                onTap: () async {
+                                  final picker = ImagePicker();
+                                  final XFile? pickedFile = await picker.pickImage(source: ImageSource.camera);
+
+                                  if (pickedFile != null) {
+                                    // You can use the pickedFile to display or upload the captured image
+                                    File imageFile = File(pickedFile.path);
+
+                                    // Add your logic to handle the captured image here
+                                    // For example, you can display the image using Image.file:
+                                    // Image.file(imageFile)
+
+                                    // Remember to import 'dart:io' for File
+                                  }
+                                },
+                                child: Container(
+                                    width: 258,
+                                    height: 120,
+                                    decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        borderRadius: BorderRadius.circular(13)),
+                                    padding: EdgeInsets.all(16.0),
+                                    child: Icon(Icons.camera_alt)
+                                ),
                               )
                             ],
                           ),

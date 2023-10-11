@@ -7,8 +7,7 @@ class PayStat extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return  Scaffold(
         drawer: MyDrawer(),
         body: SafeArea(
           child: Column(
@@ -160,7 +159,6 @@ class PayStat extends StatelessWidget {
             ],
           ),
         ),
-      ),
     );
   }
 }

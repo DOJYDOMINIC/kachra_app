@@ -7,6 +7,7 @@ import '../main.dart';
 import 'bulkwastcollection.dart';
 import 'complaints.dart';
 import 'drawer/drawer_final.dart';
+import 'my_status.dart';
 
 class Mystatus extends StatelessWidget {
   const Mystatus({super.key});
@@ -45,7 +46,9 @@ class Mystatus extends StatelessWidget {
               child: Column(
                 children: [
                   GestureDetector(
-                    onTap: (){},
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder:  (context) => CalendarScreen(),));
+                    },
                     child: Container(
                       width: MediaQuery.of(context).size.width*8,
                       height: MediaQuery.of(context).size.height*.18,

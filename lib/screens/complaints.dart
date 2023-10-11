@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:kachra_app/screens/start_page.dart';
-
-import '../main.dart';
+import 'dart:io';
 import 'drawer/drawer_final.dart';
 // import 'main_fields.dart';
 
@@ -107,18 +107,21 @@ class incidents extends StatelessWidget {
                                                 color: Colors.grey,
                                                 fontSize: 13),
                                           )),
-                                      TextField(
-                                        textAlignVertical:
-                                        TextAlignVertical.center,
-                                        // Center-align the hint text vertically
-                                        decoration: InputDecoration(
-                                          border: InputBorder.none,
-                                          // Remove the underline border
-                                          hintStyle:
-                                          TextStyle(color: Colors.black),
-                                          contentPadding: EdgeInsets.symmetric(
-                                              horizontal:
-                                              16.0), // Adjust horizontal padding as needed
+                                      SizedBox(
+                                        height: 20,
+                                        child: TextField(
+                                          textAlignVertical:
+                                          TextAlignVertical.center,
+                                          // Center-align the hint text vertically
+                                          decoration: InputDecoration(
+                                            border: InputBorder.none,
+                                            // Remove the underline border
+                                            hintStyle:
+                                            TextStyle(color: Colors.black),
+                                            contentPadding: EdgeInsets.symmetric(
+                                                horizontal:
+                                                16.0), // Adjust horizontal padding as needed
+                                          ),
                                         ),
                                       ),
                                     ],
@@ -128,9 +131,7 @@ class incidents extends StatelessWidget {
                               Padding(
                                 padding:
                                 const EdgeInsets.fromLTRB(0, 16, 0, 16),
-                                child: GestureDetector(
-                                  onTap: () {},
-                                  child: Container(
+                                child: Container(
                                     height: 52,
                                     width: 258,
                                     decoration: BoxDecoration(
@@ -142,16 +143,32 @@ class incidents extends StatelessWidget {
                                       size: 24,
                                     ),
                                   ),
-                                ),
                               ),
-                              Container(
-                                  width: 258,
-                                  height: 120,
-                                  decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      borderRadius: BorderRadius.circular(13)),
-                                  padding: EdgeInsets.all(16.0),
-                                  child: Icon(Icons.camera_alt)
+                              GestureDetector(
+                                onTap: () async {
+                                  final picker = ImagePicker();
+                                  final XFile? pickedFile = await picker.pickImage(source: ImageSource.camera);
+
+                                  if (pickedFile != null) {
+                                    // You can use the pickedFile to display or upload the captured image
+                                    File imageFile = File(pickedFile.path);
+
+                                    // Add your logic to handle the captured image here
+                                    // For example, you can display the image using Image.file:
+                                    // Image.file(imageFile)
+
+                                    // Remember to import 'dart:io' for File
+                                  }
+                                },
+                                child: Container(
+                                    width: 258,
+                                    height: 120,
+                                    decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        borderRadius: BorderRadius.circular(13)),
+                                    padding: EdgeInsets.all(16.0),
+                                    child: Icon(Icons.camera_alt)
+                                ),
                               )
                             ],
                           ),

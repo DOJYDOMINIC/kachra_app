@@ -190,18 +190,21 @@ class Bulkwaste extends StatelessWidget {
                                                 color: Colors.grey,
                                                 fontSize: 13),
                                           )),
-                                      TextField(
-                                        textAlignVertical:
-                                        TextAlignVertical.center,
-                                        // Center-align the hint text vertically
-                                        decoration: InputDecoration(
-                                          border: InputBorder.none,
-                                          // Remove the underline border
-                                          hintStyle:
-                                          TextStyle(color: Colors.black),
-                                          contentPadding: EdgeInsets.symmetric(
-                                              horizontal:
-                                              16.0), // Adjust horizontal padding as needed
+                                      SizedBox(
+                                        height: 25,
+                                        child: TextField(
+                                          textAlignVertical:
+                                          TextAlignVertical.center,
+                                          // Center-align the hint text vertically
+                                          decoration: InputDecoration(
+                                            border: InputBorder.none,
+                                            // Remove the underline border
+                                            hintStyle:
+                                            TextStyle(color: Colors.black),
+                                            contentPadding: EdgeInsets.symmetric(
+                                                horizontal:
+                                                16.0), // Adjust horizontal padding as needed
+                                          ),
                                         ),
                                       ),
                                     ],

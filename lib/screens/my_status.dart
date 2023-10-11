@@ -1,84 +1,132 @@
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
+
+import 'drawer/drawer_final.dart';
+
+class CalendarScreen extends StatefulWidget {
+  @override
+  _CalendarScreenState createState() => _CalendarScreenState();
+}
+
+class _CalendarScreenState extends State<CalendarScreen> {
+  bool inone = false;
+  DateRangePickerController _controller = DateRangePickerController();
+  DateRangePickerController _controllersingle = DateRangePickerController();
+  late DateTime _startDate;
+  late DateTime _endDate;
+  late DateTime _initialSelectedDate; // Add this variable
+
+  @override
+  void initState() {
+    super.initState();
+    _startDate = DateTime.now();
+    _endDate = DateTime.now();
+    // _initialSelectedDate = DateTime(023, 10, 13),
+    _controllersingle.selectedDate = _initialSelectedDate = DateTime(2023, 10, 13); // Set your initial selected date here
+    _controller.selectedRanges = [PickerDateRange(_startDate, _endDate)];
+  }
+
+  void _updateDateRange(DateRangePickerSelectionChangedArgs args) {
+    if (args.value is PickerDateRange) {
+      final range = args.value as PickerDateRange;
+      setState(() {
+        if (range.startDate != null) {
+          _startDate = range.startDate!;
+        } else {
+          print("start null");
+        }
+        if (range.endDate != null) {
+          _endDate = range.endDate!;
+        } else {
+          print("end null");
+        }
+      });
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      drawer: MyDrawer(),
+      body: SafeArea(
+        child: Column(
+          children: [
+            Stack(
+              children: <Widget>[
+                Image(image: AssetImage('asset/image/calender_back.png')),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                      child: Builder(
+                        builder: (BuildContext context) {
+                          return IconButton(
+                            onPressed: () {
+                              Scaffold.of(context).openDrawer();
+                            },
+                            icon:
+                            Icon(Icons.menu, color: Colors.black, size: 35),
+                          );
+                        },
+                      ),
+                    ),
+                  ],
+                ),
+                // Padding(
+                //   padding: const EdgeInsets.only(top: 110, left: 20, right: 20),
+                //   child: Container(
+                //     height: 330,
+                //     child: SfDateRangePicker(
+                //       headerStyle: DateRangePickerHeaderStyle(
+                //         textStyle: GoogleFonts.montserrat(
+                //             color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20),
+                //         textAlign: TextAlign.start,),
+                //       controller: _controllersingle,
+                //       initialDisplayDate: _initialSelectedDate,
+                //       todayHighlightColor: Colors.transparent,
+                //       selectionShape: DateRangePickerSelectionShape.circle,
+                //       extendableRangeSelectionDirection: ExtendableRangeSelectionDirection.both,
+                //       // todayHighlightColor: Colors.red,
+                //       rangeSelectionColor: Color.fromARGB(225, 229, 224, 223),
+                //       selectionMode: DateRangePickerSelectionMode.multiple,
+                //       selectionColor: Colors.green,
+                //       onSelectionChanged: _updateDateRange,
+                //     ),
+                //   ),
+                // ),
+                  Padding(
+                    padding:
+                    const EdgeInsets.only(top: 110, left: 20, right: 20),
+                    child: Container(
+                      height: 330,
+                      child: SfDateRangePicker(
+                        headerStyle: DateRangePickerHeaderStyle(
+                          textStyle: GoogleFonts.montserrat(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20),
+                          textAlign: TextAlign.start,),
+                        controller: _controller,
+                        initialSelectedDate: DateTime(2023, 10, 13),
+                        selectionShape: DateRangePickerSelectionShape.circle,
+                        extendableRangeSelectionDirection: ExtendableRangeSelectionDirection.both,
+                        todayHighlightColor: Colors.transparent,
+                        selectionMode: DateRangePickerSelectionMode.multiple,
+                        selectionColor: Colors.green,
+                        onSelectionChanged: _updateDateRange,
+                      ),
+                    ),
+                  ),
 //
-// import 'package:flutter/material.dart';
-// import 'package:syncfusion_flutter_datepicker/datepicker.dart';
-//
-// class Calender extends StatefulWidget {
-//   @override
-//   CalenderState createState() => CalenderState();
-// }
-//
-// class CalenderState extends State<Calender> {
-//   late DateTime _lastVisitedDate; // Store the last visited date.
-//
-//   @override
-//   void initState() {
-//     super.initState();
-//
-//     // Initialize the last visited date. You can set it to your preferred date.
-//     _lastVisitedDate = DateTime.now().subtract(Duration(days: 1));
-//   }
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       home: Scaffold(
-//         appBar: AppBar(
-//           title: const Text('DatePicker demo'),
-//         ),
-//         body: Stack(
-//           children: <Widget>[
-//             Positioned(
-//               left: 0,
-//               right: 0,
-//               top: 80,
-//               bottom: 0,
-//               child: SfDateRangePicker(
-//                 selectionRadius: 30,
-//                 selectionShape: DateRangePickerSelectionShape.circle,
-//                 onSelectionChanged: _onSelectionChanged,
-//                 selectionMode: DateRangePickerSelectionMode.range,
-//                 initialSelectedRange: PickerDateRange(
-//                   DateTime.now().subtract(const Duration(days: 4)),
-//                   DateTime.now().add(const Duration(days: 3)),
-//                 ),
-//                 startRangeSelectionColor: Colors.red,
-//                 endRangeSelectionColor: Colors.green,
-//                 cellBuilder: (BuildContext context, DateRangePickerCellDetails cellDetails) {
-//                   // Check if the current cell date is within the selected range.
-//                   bool isDateInRange = cellDetails.date.isAfter(_lastVisitedDate) &&
-//                       cellDetails.date.isBefore(DateTime.now());
-//
-//                   return GestureDetector(
-//                     onTap: () {
-//                       // Handle cell tap here if needed.
-//                     },
-//                     child: Container(
-//                       decoration: BoxDecoration(
-//                         shape: BoxShape.circle,
-//                         color: isDateInRange ? Colors.red : Colors.transparent,
-//                       ),
-//                       child: Center(
-//                         child: Text(
-//                           cellDetails.date.day.toString(),
-//                           style: TextStyle(
-//                             color: isDateInRange ? Colors.white : Colors.black,
-//                             fontWeight: isDateInRange ? FontWeight.bold : FontWeight.normal,
-//                           ),
-//                         ),
-//                       ),
-//                     ),
-//                   );
-//                 },
-//               ),
-//             ),
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-//
-//   void _onSelectionChanged(DateRangePickerSelectionChangedArgs args) {
-//     // Handle date range selection here if needed.
-//     print('Selected Range: ${args.value.startDate} - ${args.value.endDate}');
-//   }
-// }
+              ],
+            ),
+            // Text('Start Date: $_startDate'),
+            // Text('End Date: $_endDate'),
+          ],
+        ),
+      ),
+    );
+  }
+}

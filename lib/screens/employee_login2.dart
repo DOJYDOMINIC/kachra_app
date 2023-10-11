@@ -20,7 +20,6 @@ class EmpLogin2 extends StatelessWidget {
               ),
             ),
             Center(
-              // padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
               child: Column(
 
                 mainAxisAlignment: MainAxisAlignment.center,
