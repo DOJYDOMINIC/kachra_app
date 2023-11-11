@@ -15,13 +15,13 @@ class _EnterDetailsState extends State<EnterDetails> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      drawer:MyDrawer(),
+      drawer:const MyDrawer(),
 
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            SizedBox(height: 5,),
+            const SizedBox(height: 5,),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -33,7 +33,7 @@ class _EnterDetailsState extends State<EnterDetails> {
                         onPressed: () {
                           Scaffold.of(context).openDrawer();
                         },
-                        icon: Icon(Icons.menu, color: Colors.black, size: 35),
+                        icon: const Icon(Icons.menu, color: Colors.black, size: 35),
                       );
                     },
                   ),
@@ -61,10 +61,10 @@ class _EnterDetailsState extends State<EnterDetails> {
                           Container(
                             height: 46,
                             width: 46,
-                            decoration: BoxDecoration(image: DecorationImage(
+                            decoration: const BoxDecoration(image: DecorationImage(
                                 image: AssetImage('asset/image/note.png',))),
                           ),
-                          SizedBox(height: 5,),
+                          const SizedBox(height: 5,),
                           Text('Enter HH Details',style: GoogleFonts.montserrat(color: Colors.white,fontWeight: FontWeight.bold),
                           )
                         ],
@@ -89,10 +89,10 @@ class _EnterDetailsState extends State<EnterDetails> {
                             Container(
                               height: 46,
                               width: 46,
-                              decoration: BoxDecoration(image: DecorationImage(
+                              decoration: const BoxDecoration(image: DecorationImage(
                                   image: AssetImage('asset/image/location.png',))),
                             ),
-                            SizedBox(height: 5,),
+                            const SizedBox(height: 5,),
                             Text('Take Geo location',style: GoogleFonts.montserrat(color: Colors.white,fontWeight: FontWeight.bold),
                             )
                           ],
@@ -114,10 +114,10 @@ class _EnterDetailsState extends State<EnterDetails> {
                           Container(
                             height: 46,
                             width: 46,
-                            decoration: BoxDecoration(image: DecorationImage(
+                            decoration: const BoxDecoration(image: DecorationImage(
                                 image: AssetImage('asset/image/qr.png',))),
                           ),
-                          SizedBox(height: 5,),
+                          const SizedBox(height: 5,),
                           Text('Generate Unique ID',style: GoogleFonts.montserrat(color: Colors.white,fontWeight: FontWeight.bold),
                           )
                         ],
@@ -128,10 +128,10 @@ class _EnterDetailsState extends State<EnterDetails> {
               ),
             ),
             SizedBox(height: MediaQuery.of(context).size.height*.08,),
-            Container(
+            SizedBox(
               height: MediaQuery.of(context).size.height*0.05,
-              child:Padding(
-                padding: const EdgeInsets.fromLTRB(10, 0, 10 , 0),
+              child:const Padding(
+                padding: EdgeInsets.fromLTRB(10, 0, 10 , 0),
                 // child: Row(
                 //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 //     children: [

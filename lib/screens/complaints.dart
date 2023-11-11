@@ -11,7 +11,7 @@ class incidents extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    TextEditingController _name = TextEditingController();
+    TextEditingController name = TextEditingController();
     return GestureDetector(
       onTap: () {
         if (!FocusScope.of(context).hasPrimaryFocus) {
@@ -21,13 +21,13 @@ class incidents extends StatelessWidget {
       child: Scaffold(
         resizeToAvoidBottomInset: false,
         backgroundColor: Colors.white,
-        drawer: MyDrawer(),
+        drawer: const MyDrawer(),
         body: SafeArea(
           child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 5,
                 ),
                 Row(
@@ -41,7 +41,7 @@ class incidents extends StatelessWidget {
                             onPressed: () {
                               Scaffold.of(context).openDrawer();
                             },
-                            icon: Icon(Icons.menu, color: Colors.black, size: 35),
+                            icon: const Icon(Icons.menu, color: Colors.black, size: 35),
                           );
                         },
                       ),
@@ -59,7 +59,7 @@ class incidents extends StatelessWidget {
                       Container(
                         // height: 400,
                         width: 290,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             color: Color.fromARGB(225, 229, 224, 223),
                             borderRadius: BorderRadiusDirectional.only(
                                 bottomStart: Radius.circular(13),
@@ -73,7 +73,7 @@ class incidents extends StatelessWidget {
                               Container(
                                 height: 73,
                                 width: 290,
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                     color: app_color,
                                     borderRadius: BorderRadiusDirectional.only(
                                         bottomStart: Radius.circular(13),
@@ -107,7 +107,7 @@ class incidents extends StatelessWidget {
                                                 color: Colors.grey,
                                                 fontSize: 13),
                                           )),
-                                      SizedBox(
+                                      const SizedBox(
                                         height: 20,
                                         child: TextField(
                                           textAlignVertical:
@@ -138,7 +138,7 @@ class incidents extends StatelessWidget {
                                         color: Colors.white,
                                         borderRadius:
                                         BorderRadius.circular(13)),
-                                    child: Icon(
+                                    child: const Icon(
                                       Icons.location_on_outlined,
                                       size: 24,
                                     ),
@@ -166,8 +166,8 @@ class incidents extends StatelessWidget {
                                     decoration: BoxDecoration(
                                         color: Colors.white,
                                         borderRadius: BorderRadius.circular(13)),
-                                    padding: EdgeInsets.all(16.0),
-                                    child: Icon(Icons.camera_alt)
+                                    padding: const EdgeInsets.all(16.0),
+                                    child: const Icon(Icons.camera_alt)
                                 ),
                               )
                             ],
@@ -184,7 +184,7 @@ class incidents extends StatelessWidget {
                       Container(
                         height: MediaQuery.of(context).size.height*.2,
                         width: 290,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             color: Color.fromARGB(225, 229, 224, 223),
                             borderRadius: BorderRadiusDirectional.only(
                                 bottomStart: Radius.circular(13),
@@ -198,7 +198,7 @@ class incidents extends StatelessWidget {
                               Container(
                                 height: 73,
                                 width: 290,
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                     color: app_color,
                                     borderRadius: BorderRadiusDirectional.only(
                                         bottomStart: Radius.circular(13),
@@ -206,7 +206,7 @@ class incidents extends StatelessWidget {
                                         topEnd: Radius.circular(13),
                                         topStart: Radius.circular(13))),
                                 child: Center(
-                                  child: Container(
+                                  child: SizedBox(
                                     width: 150,
                                     child: Text('services relatedComplaints',
                                         textAlign: TextAlign.center,
@@ -227,10 +227,10 @@ class incidents extends StatelessWidget {
                 SizedBox(
                   height: MediaQuery.of(context).size.height *.08,
                 ),
-                Container(
+                const SizedBox(
                   height: 50,
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                    padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
                     // child: Row(
                     //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     //     children: [

@@ -5,14 +5,16 @@ import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 import 'drawer/drawer_final.dart';
 
 class CalendarScreen extends StatefulWidget {
+  const CalendarScreen({super.key});
+
   @override
   _CalendarScreenState createState() => _CalendarScreenState();
 }
 
 class _CalendarScreenState extends State<CalendarScreen> {
   bool inone = false;
-  DateRangePickerController _controller = DateRangePickerController();
-  DateRangePickerController _controllersingle = DateRangePickerController();
+  final DateRangePickerController _controller = DateRangePickerController();
+  final DateRangePickerController _controllersingle = DateRangePickerController();
   late DateTime _startDate;
   late DateTime _endDate;
   late DateTime _initialSelectedDate; // Add this variable
@@ -48,13 +50,13 @@ class _CalendarScreenState extends State<CalendarScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: MyDrawer(),
+      drawer: const MyDrawer(),
       body: SafeArea(
         child: Column(
           children: [
             Stack(
               children: <Widget>[
-                Image(image: AssetImage('asset/image/calender_back.png')),
+                const Image(image: AssetImage('asset/image/calender_back.png')),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
@@ -67,7 +69,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                               Scaffold.of(context).openDrawer();
                             },
                             icon:
-                            Icon(Icons.menu, color: Colors.black, size: 35),
+                            const Icon(Icons.menu, color: Colors.black, size: 35),
                           );
                         },
                       ),
@@ -99,7 +101,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                   Padding(
                     padding:
                     const EdgeInsets.only(top: 110, left: 20, right: 20),
-                    child: Container(
+                    child: SizedBox(
                       height: 330,
                       child: SfDateRangePicker(
                         headerStyle: DateRangePickerHeaderStyle(

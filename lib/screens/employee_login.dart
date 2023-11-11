@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'drawer/drawer_final.dart';
 import 'registered_or_new entry.dart';
 
 class EmpLogin extends StatelessWidget {
@@ -42,7 +41,7 @@ class EmpLogin extends StatelessWidget {
               //   ],
               // ),
               Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage('asset/image/SignIn-Background.png'),
                     fit: BoxFit.cover,
@@ -54,7 +53,7 @@ class EmpLogin extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
+                    const Text(
                       'Sign In',
                       style: TextStyle(
                         color: Color.fromRGBO(95, 128, 94, 1),
@@ -62,8 +61,8 @@ class EmpLogin extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    SizedBox(height: 70),
-                    Row(
+                    const SizedBox(height: 70),
+                    const Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [],
                     ),
@@ -78,28 +77,28 @@ class EmpLogin extends StatelessWidget {
                               Text(
                                 'Email Address',
                                 style: GoogleFonts.montserrat(
-                                  color: Color.fromRGBO(95, 128, 94, 1),
+                                  color: const Color.fromRGBO(95, 128, 94, 1),
                                   fontSize: 15,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
                             ],
                           ),
-                          SizedBox(height: 5),
+                          const SizedBox(height: 5),
                           SizedBox(
                             height: 50,
                             child: TextField(
                               decoration: InputDecoration(
                                 enabledBorder: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(10),
-                                  borderSide: BorderSide(
+                                  borderSide: const BorderSide(
                                       width: 2,
                                       color: Colors
                                           .black), // Border color when not in focus
                                 ),
                                 focusedBorder: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(10),
-                                  borderSide: BorderSide(
+                                  borderSide: const BorderSide(
                                       width: 2,
                                       color: Colors
                                           .black), // Border color when focused
@@ -120,7 +119,7 @@ class EmpLogin extends StatelessWidget {
                         ],
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Padding(
@@ -133,28 +132,28 @@ class EmpLogin extends StatelessWidget {
                               Text(
                                 'Password',
                                 style: GoogleFonts.montserrat(
-                                  color: Color.fromRGBO(95, 128, 94, 1),
+                                  color: const Color.fromRGBO(95, 128, 94, 1),
                                   fontSize: 15,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
                             ],
                           ),
-                          SizedBox(height: 5),
+                          const SizedBox(height: 5),
                           SizedBox(
                             height: 50,
                             child: TextField(
                               decoration: InputDecoration(
                                 enabledBorder: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(10),
-                                  borderSide: BorderSide(
+                                  borderSide: const BorderSide(
                                       width: 2,
                                       color: Colors
                                           .black), // Border color when not in focus
                                 ),
                                 focusedBorder: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(10),
-                                  borderSide: BorderSide(
+                                  borderSide: const BorderSide(
                                       width: 2,
                                       color: Colors
                                           .black), // Border color when focused
@@ -194,33 +193,33 @@ class EmpLogin extends StatelessWidget {
                     //     ),
                     //   ),
                     // ),
-                    SizedBox(height: 65),
+                    const SizedBox(height: 65),
                     GestureDetector(
                       onTap: () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => RegPage(),
+                              builder: (context) => const RegPage(),
                             ));
                       },
                       child: Container(
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
                             // border: Border.all(color: Colors.black),
-                            color: Color.fromRGBO(95, 128, 94, 1)),
+                            color: const Color.fromRGBO(95, 128, 94, 1)),
                         width: MediaQuery.of(context).size.width * 0.8,
                         height: 50,
                         child: Center(
                           child: Text(
                             'Sign In',
                             style: GoogleFonts.montserrat(
-                                color: Color.fromRGBO(239, 239, 239, 1),
+                                color: const Color.fromRGBO(239, 239, 239, 1),
                                 fontWeight: FontWeight.w600),
                           ),
                         ),
                       ),
                     ),
-                    SizedBox(height: 15),
+                    const SizedBox(height: 15),
                     Padding(
                       padding: const EdgeInsets.fromLTRB(100, 20, 0, 0),
                       child: Row(
@@ -228,14 +227,14 @@ class EmpLogin extends StatelessWidget {
                           Center(
                             child: Text('Don\'t have an account?',
                                 style: GoogleFonts.montserrat(
-                                    color: Color.fromRGBO(95, 128, 94, 1),
+                                    color: const Color.fromRGBO(95, 128, 94, 1),
                                     fontSize: 13,
                                     fontWeight: FontWeight.w600)),
                           ),
                           Text(
                             ' Sign Up',
                             style: GoogleFonts.montserrat(
-                                color: Color.fromRGBO(20, 57, 20, 1),
+                                color: const Color.fromRGBO(20, 57, 20, 1),
                                 fontSize: 13,
                                 fontWeight: FontWeight.w600),
                           )

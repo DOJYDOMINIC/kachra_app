@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:kachra_app/screens/start_page.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'dart:io';
 import 'drawer/drawer_final.dart';
 
@@ -15,7 +14,7 @@ class Hotspotcleaning extends StatefulWidget {
 }
 
 class _HotspotcleaningState extends State<Hotspotcleaning> {
-  TextEditingController _ward = TextEditingController();
+  final TextEditingController _ward = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -28,13 +27,13 @@ class _HotspotcleaningState extends State<Hotspotcleaning> {
       child: Scaffold(
         resizeToAvoidBottomInset: false,
         backgroundColor: Colors.white,
-        drawer: MyDrawer(),
+        drawer: const MyDrawer(),
         body: SafeArea(
           child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 5,
                 ),
                 Row(
@@ -49,7 +48,7 @@ class _HotspotcleaningState extends State<Hotspotcleaning> {
                               Scaffold.of(context).openDrawer();
                             },
                             icon:
-                            Icon(Icons.menu, color: Colors.black, size: 35),
+                            const Icon(Icons.menu, color: Colors.black, size: 35),
                           );
                         },
                       ),
@@ -150,7 +149,7 @@ class _HotspotcleaningState extends State<Hotspotcleaning> {
                       Container(
                         // height: 400,
                         width: 290,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             color: Color.fromARGB(225, 229, 224, 223),
                             borderRadius: BorderRadiusDirectional.only(
                                 bottomStart: Radius.circular(13),
@@ -164,7 +163,7 @@ class _HotspotcleaningState extends State<Hotspotcleaning> {
                               Container(
                                 height: 73,
                                 width: 290,
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                     color: app_color,
                                     borderRadius: BorderRadiusDirectional.only(
                                         bottomStart: Radius.circular(13),
@@ -205,7 +204,7 @@ class _HotspotcleaningState extends State<Hotspotcleaning> {
                                           textAlignVertical:
                                           TextAlignVertical.center,
                                           // Center-align the hint text vertically
-                                          decoration: InputDecoration(
+                                          decoration: const InputDecoration(
                                             border: InputBorder.none,
                                             // Remove the underline border
                                             hintStyle:
@@ -234,7 +233,7 @@ class _HotspotcleaningState extends State<Hotspotcleaning> {
                                         color: Colors.white,
                                         borderRadius:
                                         BorderRadius.circular(13)),
-                                    child: Icon(
+                                    child: const Icon(
                                       Icons.location_on_outlined,
                                       size: 24,
                                     ),
@@ -263,8 +262,8 @@ class _HotspotcleaningState extends State<Hotspotcleaning> {
                                     decoration: BoxDecoration(
                                         color: Colors.white,
                                         borderRadius: BorderRadius.circular(13)),
-                                    padding: EdgeInsets.all(16.0),
-                                    child: Icon(Icons.camera_alt)
+                                    padding: const EdgeInsets.all(16.0),
+                                    child: const Icon(Icons.camera_alt)
                                 ),
                               )
                             ],
@@ -277,10 +276,10 @@ class _HotspotcleaningState extends State<Hotspotcleaning> {
                 SizedBox(
                   height: MediaQuery.of(context).size.height * .2,
                 ),
-                Container(
+                const SizedBox(
                   height: 50,
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                    padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
                     // child: Row(
                     //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     //     children: [

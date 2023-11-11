@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kachra_app/screens/start_page.dart';
 
-import '../main.dart';
 import 'drawer/drawer_final.dart';
 
 class Bulkwaste extends StatelessWidget {
@@ -10,7 +9,7 @@ class Bulkwaste extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    TextEditingController _name = TextEditingController();
+    TextEditingController name = TextEditingController();
     return GestureDetector(
       onTap: () {
         if (!FocusScope.of(context).hasPrimaryFocus) {
@@ -20,13 +19,13 @@ class Bulkwaste extends StatelessWidget {
       child: Scaffold(
         resizeToAvoidBottomInset: false,
         backgroundColor: Colors.white,
-        drawer: MyDrawer(),
+        drawer: const MyDrawer(),
         body: SafeArea(
           child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                SizedBox(
+                const SizedBox(
                   height:30,
                 ),
                 Row(
@@ -41,7 +40,7 @@ class Bulkwaste extends StatelessWidget {
                               Scaffold.of(context).openDrawer();
                             },
                             icon:
-                            Icon(Icons.menu, color: Colors.black, size: 35),
+                            const Icon(Icons.menu, color: Colors.black, size: 35),
                           );
                         },
                       ),
@@ -142,7 +141,7 @@ class Bulkwaste extends StatelessWidget {
                       Container(
                         // height: 400,
                         width: 290,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             color: Color.fromARGB(225, 229, 224, 223),
                             borderRadius: BorderRadiusDirectional.only(
                                 bottomStart: Radius.circular(13),
@@ -156,7 +155,7 @@ class Bulkwaste extends StatelessWidget {
                               Container(
                                 height: 73,
                                 width: 290,
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                     color: app_color,
                                     borderRadius: BorderRadiusDirectional.only(
                                         bottomStart: Radius.circular(13),
@@ -190,7 +189,7 @@ class Bulkwaste extends StatelessWidget {
                                                 color: Colors.grey,
                                                 fontSize: 13),
                                           )),
-                                      SizedBox(
+                                      const SizedBox(
                                         height: 25,
                                         child: TextField(
                                           textAlignVertical:
@@ -223,7 +222,7 @@ class Bulkwaste extends StatelessWidget {
                                         color: Colors.white,
                                         borderRadius:
                                         BorderRadius.circular(13)),
-                                    child: Icon(
+                                    child: const Icon(
                                       Icons.location_on_outlined,
                                       size: 24,
                                     ),
@@ -236,7 +235,7 @@ class Bulkwaste extends StatelessWidget {
                                 decoration: BoxDecoration(
                                     color: Colors.white,
                                     borderRadius: BorderRadius.circular(13)),
-                                padding: EdgeInsets.all(16.0),
+                                padding: const EdgeInsets.all(16.0),
                                 child: TextField(
                                   decoration: InputDecoration(
                                     hintText: 'Eg : Events,functions,etc...',
@@ -265,10 +264,10 @@ class Bulkwaste extends StatelessWidget {
                 SizedBox(
                   height: MediaQuery.of(context).size.height * .2,
                 ),
-                Container(
+                const SizedBox(
                   height: 50,
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                    padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
                     // child: Row(
                     //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     //     children: [

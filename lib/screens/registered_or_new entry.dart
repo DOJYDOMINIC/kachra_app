@@ -19,7 +19,7 @@ class RegPage extends StatelessWidget {
         child: Scaffold(
           resizeToAvoidBottomInset: false,
           backgroundColor: Colors.white,
-          drawer: MyDrawer(),
+          drawer: const MyDrawer(),
 
           body: SafeArea(
             child: Column(
@@ -36,7 +36,7 @@ class RegPage extends StatelessWidget {
                             onPressed: () {
                               Scaffold.of(context).openDrawer();
                             },
-                            icon: Icon(Icons.menu, color: Colors.black, size: 35),
+                            icon: const Icon(Icons.menu, color: Colors.black, size: 35),
                           );
                         },
                       ),
@@ -46,17 +46,17 @@ class RegPage extends StatelessWidget {
 
 
 
-                SizedBox(
+                const SizedBox(
                   height: 125,
                 ),
                 Center(
                   child: Column(
                     children: [
-                      Container(
+                      SizedBox(
                           width: 244,
                           height: 216,
                           child: Image.asset('asset/image/RegPage.png')),
-                      SizedBox(
+                      const SizedBox(
                         height: 35,
                       ),
                       GestureDetector(
@@ -71,20 +71,20 @@ class RegPage extends StatelessWidget {
                           height: 50,
                           width: 300,
                           decoration: BoxDecoration(
-                              color: Color.fromRGBO(95, 128, 94, 1),
+                              color: const Color.fromRGBO(95, 128, 94, 1),
                               borderRadius: BorderRadius.circular(15)),
-                          margin: EdgeInsets.all(5.0),
+                          margin: const EdgeInsets.all(5.0),
                           child: Center(
                             child: Text(
                               'Registered Residents',
                               style: (GoogleFonts.montserrat(
-                                  color: Color.fromRGBO(239, 239, 239, 1),
+                                  color: const Color.fromRGBO(239, 239, 239, 1),
                                   fontWeight: FontWeight.w600)),
                             ),
                           ),
                         ),
                       ),
-                      SizedBox(height: 10,),
+                      const SizedBox(height: 10,),
                       GestureDetector(
                         onTap: () {
                           // Navigator.push(context, MaterialPageRoute(builder: (context) => ,));
@@ -101,14 +101,14 @@ class RegPage extends StatelessWidget {
                             height: 50,
                             width: 300,
                             decoration: BoxDecoration(
-                                color: Color.fromRGBO(229, 224, 223, 1),
+                                color: const Color.fromRGBO(229, 224, 223, 1),
                                 borderRadius: BorderRadius.circular(15)),
-                            margin: EdgeInsets.all(5.0),
+                            margin: const EdgeInsets.all(5.0),
                             child: Center(
                               child: Text(
                                 'New Entry',
                                 style: (GoogleFonts.montserrat(
-                                    color: Color.fromRGBO(20, 57, 20, 1),
+                                    color: const Color.fromRGBO(20, 57, 20, 1),
                                     fontWeight: FontWeight.w600)),
                               ),
                             ),

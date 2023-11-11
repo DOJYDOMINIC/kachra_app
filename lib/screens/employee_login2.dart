@@ -12,7 +12,7 @@ class EmpLogin2 extends StatelessWidget {
         body: Stack(
           children: [
             Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage('asset/image/SignIn-Background.png'),
                   fit: BoxFit.cover,
@@ -24,15 +24,15 @@ class EmpLogin2 extends StatelessWidget {
 
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
+                  const Text(
                     'Sign In',
                     style: TextStyle(color: Color.fromRGBO(95, 128, 94, 1),
                       fontSize: 25,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(height: 70),
-                  Row(
+                  const SizedBox(height: 70),
+                  const Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
 
@@ -48,26 +48,26 @@ class EmpLogin2 extends StatelessWidget {
                           children: [
                             Text(
                               'Email Address',
-                              style: GoogleFonts.montserrat(color: Color.fromRGBO(95, 128, 94, 1),
+                              style: GoogleFonts.montserrat(color: const Color.fromRGBO(95, 128, 94, 1),
                                 fontSize: 15,
                                 fontWeight: FontWeight.bold,),
                             ),
                           ],
                         ),
-                        SizedBox(height: 5),
+                        const SizedBox(height: 5),
                         SizedBox(
                           height: 50,
                           child: TextField(
                             decoration: InputDecoration(
                               enabledBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(10),
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                     width: 2,
                                     color: Colors.black), // Border color when not in focus
                               ),
                               focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(10),
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                     width: 2,
                                     color:Colors.black), // Border color when focused
                               ),),
@@ -87,7 +87,7 @@ class EmpLogin2 extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(height: 20,),
+                  const SizedBox(height: 20,),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(30,0,30,0),
                     child: Column(
@@ -97,13 +97,13 @@ class EmpLogin2 extends StatelessWidget {
                           children: [
                             Text(
                               'Password',
-                              style: GoogleFonts.montserrat(color: Color.fromRGBO(95, 128, 94, 1),
+                              style: GoogleFonts.montserrat(color: const Color.fromRGBO(95, 128, 94, 1),
                                 fontSize: 15,
                                 fontWeight: FontWeight.bold,),
                             ),
                           ],
                         ),
-                        SizedBox(height: 5),
+                        const SizedBox(height: 5),
                         SizedBox(
                           height: 50,
                           child: TextField(
@@ -111,13 +111,13 @@ class EmpLogin2 extends StatelessWidget {
                             decoration: InputDecoration(
                               enabledBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(10),
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                     width: 2,
                                     color: Colors.black), // Border color when not in focus
                               ),
                               focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(10),
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                     width: 2,
                                     color:Colors.black), // Border color when focused
                               ),),
@@ -157,20 +157,20 @@ class EmpLogin2 extends StatelessWidget {
                   //     ),
                   //   ),
                   // ),
-                  SizedBox(height: 65),
+                  const SizedBox(height: 65),
                   GestureDetector(
-                    onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => Mystatus(),));
+                    onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => const Mystatus(),));
                     },
 
                     child: Container(
                       decoration: BoxDecoration(borderRadius: BorderRadius.circular(15),
                           // border: Border.all(color: Colors.black),
-                          color: Color.fromRGBO(95, 128, 94, 1)),
+                          color: const Color.fromRGBO(95, 128, 94, 1)),
                       width: MediaQuery.of(context).size.width*0.8,
                       height: 50,
                       child: Center(
                         child: Text('Sign In',style: GoogleFonts.montserrat(
-                            color:Color.fromRGBO(239, 239, 239, 1),
+                            color:const Color.fromRGBO(239, 239, 239, 1),
                             fontWeight: FontWeight.w600),
                         ),
                       ),

@@ -3,7 +3,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:kachra_app/screens/start_page.dart';
 // import 'package:kachara_k/drawer/drawer_complet.dart';
 
-import '../main.dart';
 import 'bulkwastcollection.dart';
 import 'complaints.dart';
 import 'drawer/drawer_final.dart';
@@ -16,7 +15,7 @@ class Mystatus extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      drawer: MyDrawer(),
+      drawer: const MyDrawer(),
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -33,7 +32,7 @@ class Mystatus extends StatelessWidget {
                         onPressed: () {
                           Scaffold.of(context).openDrawer();
                         },
-                        icon: Icon(Icons.menu, color: Colors.black, size: 35),
+                        icon: const Icon(Icons.menu, color: Colors.black, size: 35),
                       );
                     },
                   ),
@@ -47,7 +46,7 @@ class Mystatus extends StatelessWidget {
                 children: [
                   GestureDetector(
                     onTap: (){
-                      Navigator.push(context, MaterialPageRoute(builder:  (context) => CalendarScreen(),));
+                      Navigator.push(context, MaterialPageRoute(builder:  (context) => const CalendarScreen(),));
                     },
                     child: Container(
                       width: MediaQuery.of(context).size.width*8,
@@ -62,10 +61,10 @@ class Mystatus extends StatelessWidget {
                           Container(
                             height: 46,
                             width: 46,
-                            decoration: BoxDecoration(image: DecorationImage(
+                            decoration: const BoxDecoration(image: DecorationImage(
                                 image: AssetImage('asset/image/user (1) 1.png',))),
                           ),
-                          SizedBox(height: 5,),
+                          const SizedBox(height: 5,),
                           Text('My Status',style: GoogleFonts.montserrat(color: Colors.white,fontWeight: FontWeight.bold),
                           )
                         ],
@@ -76,7 +75,7 @@ class Mystatus extends StatelessWidget {
                     padding: const EdgeInsets.fromLTRB(0,38,0,38),
                     child: GestureDetector(
                       onTap: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context) =>incidents(),));
+                        Navigator.push(context, MaterialPageRoute(builder: (context) =>const incidents(),));
                       },
                       child: Container(
                         width: MediaQuery.of(context).size.width*8,
@@ -91,10 +90,10 @@ class Mystatus extends StatelessWidget {
                             Container(
                               height: 46,
                               width: 46,
-                              decoration: BoxDecoration(image: DecorationImage(
+                              decoration: const BoxDecoration(image: DecorationImage(
                                   image: AssetImage('asset/image/bad-review 2.png',))),
                             ),
-                            SizedBox(height: 5,),
+                            const SizedBox(height: 5,),
                             Text('Complaints',style: GoogleFonts.montserrat(color: Colors.white,fontWeight: FontWeight.bold),
                             )
                           ],
@@ -103,7 +102,7 @@ class Mystatus extends StatelessWidget {
                     ),
                   ),GestureDetector(
                     onTap: (){
-                      Navigator.push(context,MaterialPageRoute(builder: (context) => Services(),));
+                      Navigator.push(context,MaterialPageRoute(builder: (context) => const Services(),));
                     },
                     child: Container(
                       width: MediaQuery.of(context).size.width*8,
@@ -118,10 +117,10 @@ class Mystatus extends StatelessWidget {
                           Container(
                             height: 46,
                             width: 46,
-                            decoration: BoxDecoration(image: DecorationImage(
+                            decoration: const BoxDecoration(image: DecorationImage(
                                 image: AssetImage('asset/image/repair-tool 1.png',))),
                           ),
-                          SizedBox(height: 5,),
+                          const SizedBox(height: 5,),
                           Text('Services',style: GoogleFonts.montserrat(color: Colors.white,fontWeight: FontWeight.bold),
                           )
                         ],
@@ -132,10 +131,10 @@ class Mystatus extends StatelessWidget {
               ),
             ),
             SizedBox(height: MediaQuery.of(context).size.height*.08,),
-            Container(
+            SizedBox(
               height: MediaQuery.of(context).size.height*.02,
-              child:Padding(
-                padding: const EdgeInsets.fromLTRB(10, 0, 10 , 0),
+              child:const Padding(
+                padding: EdgeInsets.fromLTRB(10, 0, 10 , 0),
                 // child: Row(
                 //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 //     children: [

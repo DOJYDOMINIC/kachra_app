@@ -11,7 +11,7 @@ class WasteType extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: MyDrawer(),
+      drawer: const MyDrawer(),
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -27,7 +27,7 @@ class WasteType extends StatelessWidget {
                         onPressed: () {
                           Scaffold.of(context).openDrawer();
                         },
-                        icon: Icon(Icons.menu, color: Colors.black, size: 35),
+                        icon: const Icon(Icons.menu, color: Colors.black, size: 35),
                       );
                     },
                   ),
@@ -40,7 +40,7 @@ class WasteType extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                           color: Color.fromRGBO(215, 234, 209, 1),
                           borderRadius: BorderRadius.all(Radius.circular(13))),
                       // decoration: BoxDecoration(borderRadius: BorderRadius.circular(5)),
@@ -55,7 +55,7 @@ class WasteType extends StatelessWidget {
                               // color: Colors.red,
                               height: 62,
                               width: 62,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 image: DecorationImage(
                                   image: AssetImage(
                                       'asset/image/user in waste_page.png'),
@@ -69,25 +69,25 @@ class WasteType extends StatelessWidget {
                                     fontSize: 20)),
                             Text('SHAKTHI VILLA',
                                 style: GoogleFonts.montserrat(
-                                    color: Color.fromRGBO(79, 79, 79, 1),
+                                    color: const Color.fromRGBO(79, 79, 79, 1),
                                     fontWeight: FontWeight.w600)),
                             Text('OPP-GYAN BHARTI SCHOOL N.H 31',
                                 style: GoogleFonts.montserrat(
-                                    color: Color.fromRGBO(46, 46, 46, 1),
+                                    color: const Color.fromRGBO(46, 46, 46, 1),
                                     fontWeight: FontWeight.w600)),
                             Text('DIST - BEGUSARI',
                                 style: GoogleFonts.montserrat(
-                                    color: Color.fromRGBO(46, 46, 46, 1),
+                                    color: const Color.fromRGBO(46, 46, 46, 1),
                                     fontWeight: FontWeight.w600)),
                             Text('\n974727XX88',
                                 style: GoogleFonts.montserrat(
-                                    color: Color.fromRGBO(79, 79, 79, 1),
+                                    color: const Color.fromRGBO(79, 79, 79, 1),
                                     fontWeight: FontWeight.w600)),
                           ],
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
 
@@ -98,20 +98,20 @@ class WasteType extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => Handleover(),
+                                  builder: (context) => const Handleover(),
                                 ));
                           },
                           child: Container(
                             width: 134,
                             height: 121,
                             decoration: BoxDecoration(
-                                color: Color.fromRGBO(95, 128, 94, 1),
+                                color: const Color.fromRGBO(95, 128, 94, 1),
                                 borderRadius: BorderRadius.circular(15)),
                             child: Center(
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Container(
+                                  const SizedBox(
                                     height: 45,
                                     width: 45,
                                     child: Image(
@@ -123,13 +123,13 @@ class WasteType extends StatelessWidget {
                                   Text('Organic',
                                       style: GoogleFonts.montserrat(
                                           color:
-                                              Color.fromRGBO(239, 239, 239, 1),
+                                              const Color.fromRGBO(239, 239, 239, 1),
                                           fontSize: 15,
                                           fontWeight: FontWeight.w600)),
                                   Text(
                                     'Waste',
                                     style: GoogleFonts.montserrat(
-                                        color: Color.fromRGBO(239, 239, 239, 1),
+                                        color: const Color.fromRGBO(239, 239, 239, 1),
                                         fontSize: 15,
                                         fontWeight: FontWeight.w600),
                                   )
@@ -145,21 +145,21 @@ class WasteType extends StatelessWidget {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => Handleover(),
+                                    builder: (context) => const Handleover(),
                                   ));
                             },
                             child: Container(
                               width: 134,
                               height: 121,
                               decoration: BoxDecoration(
-                                color: Color.fromRGBO(95, 128, 94, 1),
+                                color: const Color.fromRGBO(95, 128, 94, 1),
                                 borderRadius: BorderRadius.circular(15),
                               ),
                               child: Center(
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    Container(
+                                    const SizedBox(
                                       height: 45,
                                       width: 45,
                                       child: Image(
@@ -170,7 +170,7 @@ class WasteType extends StatelessWidget {
                                     ),
                                     Text('Inorganic',
                                         style: GoogleFonts.montserrat(
-                                            color: Color.fromRGBO(
+                                            color: const Color.fromRGBO(
                                                 239, 239, 239, 1),
                                             fontSize: 15,
                                             fontWeight: FontWeight.w600)),
@@ -178,7 +178,7 @@ class WasteType extends StatelessWidget {
                                       'Waste',
                                       style: GoogleFonts.montserrat(
                                           color:
-                                              Color.fromRGBO(239, 239, 239, 1),
+                                              const Color.fromRGBO(239, 239, 239, 1),
                                           fontSize: 15,
                                           fontWeight: FontWeight.w600),
                                     )
@@ -191,20 +191,19 @@ class WasteType extends StatelessWidget {
                       ],
                     ),
                     // SizedBox(height: ),
-
                     Row(
                       children: [
                         Container(
                           width: 134,
                           height: 121,
                           decoration: BoxDecoration(
-                              color: Color.fromRGBO(229, 224, 223, 1),
+                              color: const Color.fromRGBO(229, 224, 223, 1),
                               borderRadius: BorderRadius.circular(15)),
                           child: Center(
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Container(
+                                const SizedBox(
                                   height: 45,
                                   width: 45,
                                   child: Image(
@@ -215,13 +214,13 @@ class WasteType extends StatelessWidget {
                                 ),
                                 Text('Edit',
                                     style: GoogleFonts.montserrat(
-                                        color: Color.fromRGBO(20, 57, 20, 1),
+                                        color: const Color.fromRGBO(20, 57, 20, 1),
                                         fontSize: 15,
                                         fontWeight: FontWeight.w600)),
                                 Text(
                                   'Details',
                                   style: GoogleFonts.montserrat(
-                                      color: Color.fromRGBO(20, 57, 20, 1),
+                                      color: const Color.fromRGBO(20, 57, 20, 1),
                                       fontSize: 15,
                                       fontWeight: FontWeight.w600),
                                 )
@@ -236,20 +235,20 @@ class WasteType extends StatelessWidget {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => PayStat(),
+                                    builder: (context) => const PayStat(),
                                   ));
                             },
                             child: Container(
                               width: 134,
                               height: 121,
                               decoration: BoxDecoration(
-                                  color: Color.fromRGBO(229, 224, 223, 1),
+                                  color: const Color.fromRGBO(229, 224, 223, 1),
                                   borderRadius: BorderRadius.circular(15)),
                               child: Center(
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    Container(
+                                    const SizedBox(
                                       height: 45,
                                       width: 45,
                                       child: Image(
@@ -261,13 +260,13 @@ class WasteType extends StatelessWidget {
                                     Text('Payment',
                                         style: GoogleFonts.montserrat(
                                             color:
-                                                Color.fromRGBO(20, 57, 20, 1),
+                                                const Color.fromRGBO(20, 57, 20, 1),
                                             fontSize: 15,
                                             fontWeight: FontWeight.w600)),
                                     Text(
                                       'Status',
                                       style: GoogleFonts.montserrat(
-                                          color: Color.fromRGBO(20, 57, 20, 1),
+                                          color: const Color.fromRGBO(20, 57, 20, 1),
                                           fontSize: 15,
                                           fontWeight: FontWeight.w600),
                                     )

@@ -8,7 +8,7 @@ class PayStat extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-        drawer: MyDrawer(),
+        drawer: const MyDrawer(),
         body: SafeArea(
           child: Column(
             children: [
@@ -23,7 +23,7 @@ class PayStat extends StatelessWidget {
                           onPressed: () {
                             Scaffold.of(context).openDrawer();
                           },
-                          icon: Icon(Icons.menu, color: Colors.black, size: 35),
+                          icon: const Icon(Icons.menu, color: Colors.black, size: 35),
                         );
                       },
                     ),
@@ -34,23 +34,23 @@ class PayStat extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 50,right: 50),
                 child: Column(
                   children: [
-                    SizedBox(height: 180),
+                    const SizedBox(height: 180),
                     Container(
                       width: MediaQuery.of(context).size.width,
                       height: 70,
                       decoration: BoxDecoration(
-                          color: Color.fromRGBO(229, 224, 223, 1),
+                          color: const Color.fromRGBO(229, 224, 223, 1),
                           borderRadius: BorderRadius.circular(13)),
                       child: Row(
                         children: [
                           Padding(
                             padding: const EdgeInsets.fromLTRB(15, 20, 0, 0),
-                            child: Container(
+                            child: SizedBox(
                               height: 50,
                               width: MediaQuery.of(context).size.width * 0.4,
                               child: Text('Pending User fee',
                                   style: GoogleFonts.montserrat(
-                                      color: Color.fromRGBO(20, 57, 20, 1),
+                                      color: const Color.fromRGBO(20, 57, 20, 1),
                                       fontSize: 13,
                                       fontWeight: FontWeight.w600)),
                             ),
@@ -59,13 +59,13 @@ class PayStat extends StatelessWidget {
                             width: 113,
                             height: 54,
                             decoration: BoxDecoration(
-                                color: Color.fromRGBO(255, 255, 255, 1),
+                                color: const Color.fromRGBO(255, 255, 255, 1),
                                 borderRadius: BorderRadius.circular(13)),
                             child: Center(
                               child: Text(
                                 '50',
                                 style: GoogleFonts.montserrat(
-                                  color: Color.fromRGBO(20, 57, 20, 1),
+                                  color: const Color.fromRGBO(20, 57, 20, 1),
                                   fontWeight: FontWeight.w600,
                                   fontSize: 13,
                                 ),
@@ -75,25 +75,25 @@ class PayStat extends StatelessWidget {
                         ],
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 60,
                     ),
                     Container(
                       width: MediaQuery.of(context).size.width,
                       height: 70,
                       decoration: BoxDecoration(
-                          color: Color.fromRGBO(229, 224, 223, 1),
+                          color: const Color.fromRGBO(229, 224, 223, 1),
                           borderRadius: BorderRadius.circular(13)),
                       child: Row(
                         children: [
                           Padding(
                             padding: const EdgeInsets.fromLTRB(15, 20, 0, 0),
-                            child: Container(
+                            child: SizedBox(
                               height: 50,
                               width: MediaQuery.of(context).size.width * 0.4,
                               child: Text('Collect User fee',
                                   style: GoogleFonts.montserrat(
-                                      color: Color.fromRGBO(20, 57, 20, 1),
+                                      color: const Color.fromRGBO(20, 57, 20, 1),
                                       fontSize: 13,
                                       fontWeight: FontWeight.w600)),
                             ),
@@ -102,13 +102,13 @@ class PayStat extends StatelessWidget {
                             width: 113,
                             height: 54,
                             decoration: BoxDecoration(
-                                color: Color.fromRGBO(255, 255, 255, 1),
+                                color: const Color.fromRGBO(255, 255, 255, 1),
                                 borderRadius: BorderRadius.circular(13)),
                             child: Center(
                               child: Text(
                                 '10',
                                 style: GoogleFonts.montserrat(
-                                    color: Color.fromRGBO(20, 57, 20, 1),
+                                    color: const Color.fromRGBO(20, 57, 20, 1),
                                     fontWeight: FontWeight.w600,fontSize: 13,),
                               ),
                             ),
@@ -116,23 +116,23 @@ class PayStat extends StatelessWidget {
                         ],
                       ),
                     ),
-                    SizedBox(height: 60),
+                    const SizedBox(height: 60),
                     Container(
                       width: MediaQuery.of(context).size.width,
                       height: 70,
                       decoration: BoxDecoration(
-                          color: Color.fromRGBO(229, 224, 223, 1),
+                          color: const Color.fromRGBO(229, 224, 223, 1),
                           borderRadius: BorderRadius.circular(13)),
                       child: Row(
                         children: [
                           Padding(
                             padding: const EdgeInsets.fromLTRB(15, 20, 0, 0),
-                            child: Container(
+                            child: SizedBox(
                               height: 50,
                               width: MediaQuery.of(context).size.width * 0.4,
                               child: Text('Report',
                                   style: GoogleFonts.montserrat(
-                                      color: Color.fromRGBO(20, 57, 20, 1),
+                                      color: const Color.fromRGBO(20, 57, 20, 1),
                                       fontSize: 13,
                                       fontWeight: FontWeight.w600)),
                             ),
@@ -141,10 +141,10 @@ class PayStat extends StatelessWidget {
                             width: 113,
                             height: 54,
                             decoration: BoxDecoration(
-                                color: Color.fromRGBO(255, 255, 255, 1),
+                                color: const Color.fromRGBO(255, 255, 255, 1),
                                 borderRadius: BorderRadius.circular(13)),
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
+                            child: const Padding(
+                              padding: EdgeInsets.all(8.0),
                               child: TextField(
                                   decoration:
                                       InputDecoration(border: InputBorder.none)),

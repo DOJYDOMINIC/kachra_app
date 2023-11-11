@@ -20,7 +20,7 @@ class _ServicesState extends State<Services> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      drawer: MyDrawer(),
+      drawer: const MyDrawer(),
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -36,7 +36,7 @@ class _ServicesState extends State<Services> {
                         onPressed: () {
                           Scaffold.of(context).openDrawer();
                         },
-                        icon: Icon(Icons.menu, color: Colors.black, size: 35),
+                        icon: const Icon(Icons.menu, color: Colors.black, size: 35),
                       );
                     },
                   ),
@@ -52,7 +52,7 @@ class _ServicesState extends State<Services> {
                 children: [
                   GestureDetector(
                     onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => Bulkwaste(),));
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const Bulkwaste(),));
                     },
                     child: Container(
                       width: MediaQuery.of(context).size.width * 8,
@@ -75,7 +75,7 @@ class _ServicesState extends State<Services> {
                     padding: const EdgeInsets.fromLTRB(0, 38, 0, 38),
                     child: GestureDetector(
                       onTap: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => Hotspotcleaning(),));
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => const Hotspotcleaning(),));
                       },
                       child: Container(
                         width: MediaQuery.of(context).size.width * 8,
@@ -97,7 +97,7 @@ class _ServicesState extends State<Services> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => BinrelatedServices(),));
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const BinrelatedServices(),));
                     },
                     child: Container(
                       width: MediaQuery.of(context).size.width * 8,
@@ -122,10 +122,10 @@ class _ServicesState extends State<Services> {
             SizedBox(
               height: MediaQuery.of(context).size.height * .08,
             ),
-            Container(
+            const SizedBox(
               height: 50,
               child: Padding(
-                padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
                 // child: Row(
                 //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 //   children: [

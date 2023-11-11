@@ -25,7 +25,7 @@ class StartPage extends StatelessWidget {
       child: Scaffold(
         resizeToAvoidBottomInset: false,
         backgroundColor: Colors.white,
-        drawer: MyDrawer(),
+        drawer: const MyDrawer(),
         body: SafeArea(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -43,7 +43,7 @@ class StartPage extends StatelessWidget {
                               onPressed: () {
                                 Scaffold.of(context).openDrawer();
                               },
-                              icon: Icon(Icons.menu,
+                              icon: const Icon(Icons.menu,
                                   color: Colors.black, size: 35),
                             );
                           },
@@ -53,14 +53,14 @@ class StartPage extends StatelessWidget {
                   ),
                   Column(
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(right: 20),
+                      const Padding(
+                        padding: EdgeInsets.only(right: 20),
                         child: Stack(
                           children: [
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Container(
+                                SizedBox(
                                     height: 300,
                                     child: Image(
                                         fit: BoxFit.cover,
@@ -71,7 +71,7 @@ class StartPage extends StatelessWidget {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
-                                Container(
+                                SizedBox(
                                     height: 100,
                                     child: Image(
                                         fit: BoxFit.cover,
@@ -85,7 +85,7 @@ class StartPage extends StatelessWidget {
                       Text(
                         'Kachra',
                         style: GoogleFonts.montserrat(
-                            color: Color.fromRGBO(0, 0, 0, 1),
+                            color: const Color.fromRGBO(0, 0, 0, 1),
                             fontSize: 25,
                             fontWeight: FontWeight.w700),
                       ),
@@ -96,7 +96,7 @@ class StartPage extends StatelessWidget {
               Container(
                 height: MediaQuery.of(context).size.height /2.5,
                 width: double.infinity,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     color: app_color,
                     borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(30),
@@ -109,7 +109,7 @@ class StartPage extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => EmpLogin(),
+                              builder: (context) => const EmpLogin(),
                             ));
                       },
                       child: Container(
@@ -127,13 +127,13 @@ class StartPage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(height:30),
+                    const SizedBox(height:30),
                     GestureDetector(
                       onTap: () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => EmpLogin2(),
+                              builder: (context) => const EmpLogin2(),
                             ));
                       },
                       child: Container(

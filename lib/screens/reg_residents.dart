@@ -15,7 +15,7 @@ class RegRes extends StatefulWidget {
 class _RegResState extends State<RegRes> {
   @override
   Widget build(BuildContext context) {
-    String _scanBarcodein = '';
+    String scanBarcodein = '';
 
     Future<void> scanQRIn() async {
       String barcodeScanRes;
@@ -28,11 +28,11 @@ class _RegResState extends State<RegRes> {
       }
 // scanner
       setState(() {
-        _scanBarcodein = barcodeScanRes;
+        scanBarcodein = barcodeScanRes;
       });
     }
     return  Scaffold(
-      drawer: MyDrawer(),
+      drawer: const MyDrawer(),
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -48,7 +48,7 @@ class _RegResState extends State<RegRes> {
                         onPressed: () {
                           Scaffold.of(context).openDrawer();
                         },
-                        icon: Icon(Icons.menu, color: Colors.black, size: 35),
+                        icon: const Icon(Icons.menu, color: Colors.black, size: 35),
                       );
                     },
                   ),
@@ -63,7 +63,7 @@ class _RegResState extends State<RegRes> {
                 Container(
                   height: MediaQuery.of(context).size.height * 0.4,
                   width: MediaQuery.of(context).size.width * 0.8,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     // color: Colors.black,
                     image: DecorationImage(
                         image: AssetImage('asset/image/scaner.png')),
@@ -77,7 +77,7 @@ class _RegResState extends State<RegRes> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => WasteType(),
+                          builder: (context) => const WasteType(),
                         ));
                   },
                   child: Container(
@@ -85,12 +85,12 @@ class _RegResState extends State<RegRes> {
                     width: MediaQuery.of(context).size.width * 0.5,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Color.fromRGBO(95, 128, 94, 1)),
+                        color: const Color.fromRGBO(95, 128, 94, 1)),
                     child: Center(
                       child: Text(
                         'Scan QR Code',
                         style: GoogleFonts.montserrat(
-                            color: Color.fromRGBO(239, 239, 239, 1),
+                            color: const Color.fromRGBO(239, 239, 239, 1),
                             fontWeight: FontWeight.w600,
                             fontSize: 15),
                       ),
